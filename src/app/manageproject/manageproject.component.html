@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white; /* Set text color to white */
+        }
+
+        main {
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px; /* Added padding for better appearance */
+            border: 1px solid #ccc; /* Added border for better appearance */
+            border-radius: 8px; /* Added border-radius for rounded corners */
+        }
+
+        /* Adjust the height of the textarea */
+        #projectDescription {
+            height: 150px; /* You can adjust this value as needed */
+        }
+    </style>
+    <title>Manage Projects</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+         <br />Manage Projects
+        <span style="color: hsl(140, 98%, 51%)"></span>
+    </h1>
+
+    <main>
+        <!-- Form to manage project topics -->
+        <form action="/manage-projects" method="post">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="projectName" required>
+
+            <label for="projectDescription">Project Description:</label>
+            <textarea id="projectDescription" name="projectDescription" required></textarea>
+
+            <!-- Add other fields as needed for editing and deleting -->
+
+            <button type="submit">Add Project</button>
+            <button type="button" class="edit">Edit Project</button>
+            <button type="button" class="delete">Delete Project</button>
+        </form>
+    </main>
+</div>
+
+</body>
+</html>
